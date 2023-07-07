@@ -29,6 +29,18 @@ body
 ========================================================*/
 @import url("../fonts/montserrat-fonts.css");
 @import url("animate.css");
+@font-face { 
+	font-family : Gilroy-Bold;
+	src: url(../font/Gilroy-Bold.ttf);
+}
+@font-face { 
+	font-family : Gilroy-Regular;
+	src: url(../font/Gilroy-Regular.ttf);
+}
+@font-face { 
+	font-family : aBlacjLives;
+	src: url(../font/aBlacjLives.ttf);
+}
 /*=======================================================
       THEME STYLING START
 ========================================================*/
@@ -91,7 +103,6 @@ a {
 	transition: all 0.4s ease-in-out;
 	text-decoration: none !important;
 	font-family: 'Gilroy-Bold', sans-serif;
-	font-weight: bold;
 }
 img {
 	-webkit-transition: 0.4s ease-in-out;
