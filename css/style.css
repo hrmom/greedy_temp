@@ -29,18 +29,15 @@ body
 ========================================================*/
 @import url("../fonts/montserrat-fonts.css");
 @import url("animate.css");
+@import url('https://fonts.cdnfonts.com/css/gilroy-bold');
+@import url('https://fonts.cdnfonts.com/css/a-black-lives');
+@import url('https://fonts.cdnfonts.com/css/racing-sans-one');
 @font-face { 
-	font-family : Gilroy-Bold;
-	src: url(../font/Gilroy-Bold.ttf);
-}
-@font-face { 
-	font-family : Gilroy-Regular;
+	font-family : 'Gilroy-Regular';
 	src: url(../font/Gilroy-Regular.ttf);
 }
-@font-face { 
-	font-family : aBlacjLives;
-	src: url(../font/aBlacjLives.ttf);
-}
+
+
 /*=======================================================
       THEME STYLING START
 ========================================================*/
@@ -68,7 +65,7 @@ body {
 ========================================================*/
 h1, h2, h3, h4, h5, h6 {
 	color: #2D6B37;
-	font-family: 'aBlackLives', sans-serif;
+	font-family: 'a Black Lives', sans-serif;                                
 }
 h1 {
 	font-size: 48px;
@@ -121,18 +118,9 @@ li {
 a {
 	text-decoration: none;
 	color: #2d2d2d;
-	font-family: 'aBlackLives', sans-serif;
+	font-family: 'a Black Lives', sans-serif;
 }
 
-.font-light {
-	font-family: 'montserratlight';
-}
-.font-regular {
-	font-family: 'montserratregular';
-}
-.font-extra-bold {
-	font-family: 'montserratbold';
-}
 .text-transform-none {
 	text-transform: none !important;
 }
@@ -255,6 +243,9 @@ section {
 .bg-green {
 	background-color:#2D6B37 !important;
 }
+.bg-orange {
+	background-color:#C75333 !important;
+}
 .blog-post-home .bg-green:hover {
 	color: #fff;s
 	background-color: #c75333 !important;
@@ -294,7 +285,7 @@ header {
 	margin-top: 100px;
 }
 header a:hover, a:focus {
-	color: #fff !important;
+	color: #c75333 !important;
 }
 header .sticky {
 	padding: 0 10%;
@@ -343,7 +334,7 @@ header nav li a:hover {
 	color: #C75333;
 }
 header nav li.active a {
-	color: #C75333;
+	color: #c75333;
 }
 header nav li.active a:after {
 	width: 15px;
@@ -358,7 +349,7 @@ header nav li a:after {
 	bottom: 5px;
 	width: 0;
 	height: 2px;
-	background-color: #C75333;
+	background-color: #c75333;
 	content: "";
 	-webkit-transition: all 0.2s;
 	-moz-transition: all 0.2s;
@@ -436,6 +427,7 @@ header nav .ownmenu .indicator {
 ========================================================*/
 .home-slide {
 	position: relative;
+	z-index: 99;
 }
 .home-slide .home-agency {
 	background: none !important;
@@ -488,8 +480,22 @@ header nav .ownmenu .indicator {
       SUB BANNE
 ========================================================*/
 .sub-bnr {
-	min-height: 850px;
-	text-align: center;
+	min-height: 100vh;
+	margin: 0;
+	padding: 0;
+}
+.sub-bnr .container {
+	width: 100vw;
+	height: 100%;
+}
+#aboutvideo {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	object-fit: cover;
+	z-index: -9;
 }
 .sub-bnr h3 {
 	color: #fff;
@@ -522,13 +528,14 @@ header nav .ownmenu .indicator {
 ========================================================*/
 .who-we-are {
 	background: url(../images/bg_1-02.jpg) center top fixed no-repeat;
+	z-index: 99;
 }
 .checkline-gr{
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 80px;
+	height: 72px;
 	background: url(../images/checkline_gr.jpg);
 	background-size: cover;
 	z-index: 99;
@@ -538,7 +545,7 @@ header nav .ownmenu .indicator {
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 80px;
+	height: 72px;
 	background: url(../images/checkline_or.png);
 	background-size: cover;
 	z-index: 99;
@@ -548,12 +555,134 @@ header nav .ownmenu .indicator {
 	float: right;
 	margin-right: 50px;
 }
+/*=======================================================
+      WE ARE HERE
+========================================================*/
+.we-are-here {
+}
+
+.we-are-here .heading-block {
+	text-align: center;
+}
+.we-are-here .heading-block h3 {
+	font-size: 5rem;
+	border-bottom: 3px solid #2D6B37;
+	display: inline-block;
+	padding-bottom: 10px;
+}
+.we-are-here .row {
+	padding: 50px;
+}
+.we-are-here .row .col-md-6 {
+}
+.content-we-are {
+	padding-right: 50px;
+	padding-left: 50px;
+}
+.content-we-are h3 {
+	color:rgba(199, 83, 51, 1);
+	font-family: 'Racing Sans One', sans-serif;
+	font-size: 7rem;
+	margin: 100px 0 10px 0;
+}
+.content-we-are h6 {
+	margin-bottom: 40px;
+}
+.we-are-here .row .hereimg1 {
+	height: 500px;
+	background: url(../images/location_1-01-01.png) center center no-repeat;
+	background-size: cover;
+}
+.we-are-here .row .hereimg2 {
+	height: 500px;
+	background: url(../images/location_2-01-01.png) center center no-repeat;
+	background-size: cover;
+}
+
+/*=======================================================
+      POPULAR MENU
+========================================================*/
+.popular {
+	background-color: #fff;
+	min-height: 800px;
+	padding: 0;
+}
+.popular .heading-block {
+	text-align: center;
+	margin-bottom: 100px;
+}
+.popular .heading-block h3 {
+	font-size: 5rem;
+	border-bottom: 3px solid #2D6B37;
+	display: inline-block;
+	padding-bottom: 10px;
+}
+.popular .container {
+	width: 100vw;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+.popular .container .row {
+	width: 100vw;
+	height: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	gap: 0;
+	justify-content: center;
+}
+.popular .container .row li {
+	min-width: 330px;
+	min-height: 330px;
+	display: flex;
+	flex-grow: 1;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	box-sizing: border-box;
+	overflow: hidden;
+	position: relative;
+	display: flex;
+
+}
+.popular .container .row li a {
+	width: 100%;
+	text-align: center;
+	color: #fff;
+	font-size: 3rem;
+	position: absolute;
+	background-color:rgba(199, 83, 51, 1);
+	padding: 150px 0;
+	opacity: 0;
+}
+.popular .container .row li:hover a {
+	opacity: 1;
+}
+.popular .container .row li:hover:nth-of-type(2) a {opacity: 0 !important;}
+.popular .container .row li:hover:nth-of-type(2) {background-size: 110%;}
+.popular .container .row li:hover:nth-of-type(9) a {opacity: 0 !important; }
+.popular .container .row li:hover:nth-of-type(9) {background-size: 110%;}
+
+.popular .container .row li:nth-of-type(1) {background: url(../images/menu/strberry.png) center center no-repeat;background-size: 70%;}
+.popular .container .row li:nth-of-type(2) {background: url(../images/char_2-01.png) center center no-repeat;background-size: contain;}
+.popular .container .row li:nth-of-type(3) {background: url(../images/menu/strberry.png) center center no-repeat;background-size: 70%;}
+.popular .container .row li:nth-of-type(4) {background: url(../images/menu/allbagel-01.png) center center no-repeat;background-size: contain;}
+.popular .container .row li:nth-of-type(5) {background: url(../images/menu/strberry.png) center center no-repeat;background-size: 70%;}
+.popular .container .row li:nth-of-type(6) {background: url(../images/menu/allbagel-01.png) center center no-repeat;background-size: contain;}
+.popular .container .row li:nth-of-type(7) {background: url(../images/menu/strberry.png) center center no-repeat;background-size: 70%;}
+.popular .container .row li:nth-of-type(8) {background: url(../images/menu/allbagel-01.png) center center no-repeat;background-size: contain;}
+.popular .container .row li:nth-of-type(9) {background: url(../images/char_3-01.png) center center no-repeat;background-size: contain;}
+.popular .container .row li:nth-of-type(10) {background: url(../images/menu/allbagel-01.png) center center no-repeat;background-size: contain;}
+
+
 
 /*=======================================================
       PORTFOLIO
 ========================================================*/
 .portfolio {
-	background: none;
+	background-color: #fff;
+	z-index: 99;
 }
 
 .portfolio .heading-block {
@@ -588,7 +717,7 @@ header nav .ownmenu .indicator {
 }
 
 .portfolio .port-item img {
-	width: 100%;
+	transform: scale(0.8);
 	height: 340px;
 }
 .portfolio article {
@@ -653,7 +782,7 @@ a.big-border:hover {
 	opacity: 1;
 }
 .portfolio .port-item:hover img {
-	transform: scale(1.1);
+	transform: scale(1.01);
 }
 .portfolio .port-item:hover .position-center-center {
 	display: block;
@@ -679,7 +808,7 @@ a.big-border:hover {
 }
 .portfolio .port-detail {
 	width: 100%;
-	text-align: left;
+	text-align: center;
 }
 .portfolio .port-detail {
 	margin-top: 30px;
@@ -852,10 +981,10 @@ a.big-border:hover {
 	transition: all 0.4s ease-in-out;
 }
 .cbp-l-filters-buttonCenter .cbp-filter-counter:before {
-	border-top: 4px solid #f6772c;
+	border-top: 4px solid #c75333;
 }
 .cbp-l-filters-buttonCenter .cbp-filter-counter {
-	background: #f6772c;
+	background: #c75333;
 }
 .filter-style-2 {
 	display: inline-block;
@@ -894,9 +1023,9 @@ a.big-border:hover {
 	border: none;
 	text-transform: uppercase;
 	font-size: 13px;
-	color: #666666;
+	color: #2D6B37;
 	letter-spacing: 1px;
-	font-family: 'Montserrat', sans-serif;
+	font-family: inherit;
 	padding: 5px 30px;
 }
 .filter-style-3 .cbp-filter-item:hover:before {
@@ -904,7 +1033,7 @@ a.big-border:hover {
 	position: absolute;
 	width: 25px;
 	bottom: 0px;
-	background: #f6772d;
+	background: #c75333;
 	height: 2px;
 	margin: 0 auto;
 	left: 0px;
@@ -915,17 +1044,17 @@ a.big-border:hover {
 	position: absolute;
 	width: 25px;
 	bottom: 0px;
-	background: #f6772d;
+	background: #c75333;
 	height: 2px;
 	margin: 0 auto;
 	left: 0px;
 	right: 0px;
 }
 .filter-style-3 .cbp-filter-item.cbp-filter-item-active {
-	color: #f6772d;
+	color: #c75333;
 }
 .filter-style-3 .cbp-filter-item:hover {
-	color: #f6772d;
+	color: #c75333;
 }
 .filter-style-4 {
 	border-bottom: 1px solid #e5e9ea;
@@ -1059,38 +1188,97 @@ a.big-border:hover {
 }
 
 /*=======================================================
-      SERVICES
+      ABOUT_GREEDY
 ========================================================*/
 .services {
 }
-.services .service-part li {
-	margin-bottom: 50px;
-	padding-right: 50px;
+.services .container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	gap: 0;
 }
-.services .service-part h6 {
-	font-size: 16px;
-	font-weight: bold;
-	text-transform: uppercase;
+.services .container .col-md-6 {
+	width: 100%;
 }
-.services .service-part p {
-	font-size: 13px;
-	line-height: 23px;
+.about-logo {
+	background: url(../images/logo_typo.png) center center no-repeat;
+	background-size: contain;
+	height: 400px;
 }
-.services .service-part {
-	margin-top: 200px;
+.services .heading-block {
+	text-align: center;
+	margin-bottom: 100px;
 }
-.services .service-part i {
-	font-size: 22px;
+.services .heading-block h3 {
+	font-size: 5rem;
+	border-bottom: 3px solid #2D6B37;
 	display: inline-block;
-	margin-bottom: 20px;
+	padding-bottom: 10px;
+	margin-bottom: 40px;
 }
-.services.style-2 .content-we-are {
-	padding-left: 80px;
+/*=======================================================
+      ABOUT_Gallery
+========================================================*/
+.about-gallery .container {
+	width: 100vw;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
 }
-.style-img-4 {
-	margin-left: -150px;
-	float: left;
+.about-gallery .container .row {
+	width: 100vw;
+	height: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	gap: 0;
+	justify-content: center;
 }
+.about-gallery .container .row li {
+	min-width: 330px;
+	min-height: 330px;
+	display: flex;
+	flex-grow: 1;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	box-sizing: border-box;
+	overflow: hidden;
+	position: relative;
+	display: flex;
+
+}
+.about-gallery .container .row li a {
+	width: 100%;
+	text-align: center;
+	color: #fff;
+	font-size: 3rem;
+	position: absolute;
+	background-color:rgba(199, 83, 51, 1);
+	padding: 150px 0;
+	opacity: 0;
+}
+.about-gallery .container .row li:hover a {
+	opacity: 1;
+}
+.about-gallery .container .row li:hover:nth-of-type(2) a {opacity: 0 !important;}
+.about-gallery .container .row li:hover:nth-of-type(2) {background-size: 110%;}
+.about-gallery .container .row li:hover:nth-of-type(9) a {opacity: 0 !important; }
+.about-gallery .container .row li:hover:nth-of-type(9) {background-size: 110%;}
+
+.about-gallery .container .row li:nth-of-type(1) {background: url(../images/gallery/Greedy-Donut-Instagram-0703-10.jpg) center center no-repeat;background-size: cover;}
+.about-gallery .container .row li:nth-of-type(2) {background: url(../images/char_2-01.png) center center no-repeat;background-size: contain;}
+.about-gallery .container .row li:nth-of-type(3) {background: url(../images/gallery/Greedy-Donut-Instagram-0703-8.jpg) center center no-repeat;background-size: cover;}
+.about-gallery .container .row li:nth-of-type(4) {background: url(../images/gallery/Greedy-Donut-Instagram-0705-2.jpg) center center no-repeat;background-size: cover;}
+.about-gallery .container .row li:nth-of-type(5) {background: url(../images/gallery/Greedy-Donut-0705-2.jpg) center center no-repeat;background-size: cover;}
+.about-gallery .container .row li:nth-of-type(6) {background: url(../images/gallery/Greedy-Donut-0705-3.jpg) center center no-repeat;background-size: cover;}
+.about-gallery .container .row li:nth-of-type(7) {background: url(../images/gallery/Greedy-Donut-Instagram-0705-2.jpg) center center no-repeat;background-size: cover;}
+.about-gallery .container .row li:nth-of-type(8) {background: url(../images/gallery/Greedy-Donut-Instagram-0705-3.jpg) center center no-repeat;background-size: cover;}
+.about-gallery .container .row li:nth-of-type(9) {background: url(../images/char_3-01.png) center center no-repeat;background-size: contain;}
+.about-gallery .container .row li:nth-of-type(10) {background: url(../images/gallery/Greedy-Donut-0705-7.jpg) center center no-repeat;background-size: cover;}
+
 /*=======================================================
       FEATURED
 ========================================================*/
@@ -1135,14 +1323,23 @@ a.big-border:hover {
 	top: 0px;
 	right: 20%;
 }
-.content-we-are {
-	padding-right: 35%;
-	padding-left: 50px;
-}
+
 /*=======================================================
       OUR TEAM
 ========================================================*/
 .our-team {
+}
+.our-team .heading-block {
+	text-align: center;
+}
+.our-team .heading-block h3 {
+	font-size: 5rem;
+	border-bottom: 3px solid #2D6B37;
+	display: inline-block;
+	padding-bottom: 10px;
+}
+.our-team img {
+	width: 100%;
 }
 .our-team article {
 	position: relative;
@@ -1215,6 +1412,7 @@ a.big-border:hover {
       BLOG
 ========================================================*/
 .blog {
+	z-index: 99;
 }
 
 .blog .heading-block {
@@ -1657,14 +1855,27 @@ a.big-border:hover {
 ========================================================*/
 .imgfix {
 	position: relative;
+	z-index: -99;
 }
+
 .imgfix .bgfull{
 	width: 100%;
 	height: 500px;
-	background-image: url(../images/bg_2-02.jpg);
+	background-color: transparent;
 	background-position: top center;
 	background-size: cover;
-	background-attachment: fixed;
+	overflow: hidden;
+	position: relative;
+
+}
+#mainvideo {
+	position: fixed;
+	object-fit: cover;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	transform: scale(1.2);
 }
 .imgfix .checkline-gr {
 	position: absolute;
@@ -1683,6 +1894,10 @@ a.big-border:hover {
 	min-height: 920px;
 	background-image: url(../images/bg_3.jpg);
 }
+.event .checkline-or {
+	height: 72px;
+	background-position: center center;
+}
 .event .container {
 	display: flex;
 	flex-direction: column;
@@ -1696,11 +1911,11 @@ a.big-border:hover {
 	border-bottom: 3px solid #2D6B37;
 	display: inline-block;
 	padding-bottom: 10px;
+	margin-bottom: 20px;
 }
 .event div {
 	width: 100%;
 	height: 60px;
-	margin-top: 30px;
 }
 .event div img {
 	height: 100%;
@@ -1710,11 +1925,23 @@ a.big-border:hover {
 	width: 80%;
 	margin-top: 100px;
 	justify-content: center;
+	align-items: center;
 } 
-.event .row .sns a {
-	display: block;
+.event .row .sns {
+	display: flex;
 	width: 350px;
 	height: 350px;
+	justify-content: center;
+	align-items: center;
+}
+.event .row .sns a {
+	opacity: 0;
+	width: 100%;
+	text-align: center;
+	padding: 140px 0;
+}
+.event .row .sns:hover a {
+	opacity: 1;
 }
 .event .insta-1 {
 	background: url(../images/sns/Greedy_Instagram_2023.05.12.png) center center no-repeat;
@@ -1736,7 +1963,10 @@ a.big-border:hover {
 	-ms-transition: all 0.4s ease-in-out;
 	transition: all 0.4s ease-in-out;
 }
-
+.event .row .sns i {
+	color: #fff;
+	font-size: 7rem;
+}
 .event .btn-wrap {
 	text-align: center;
 	margin-top: 70px;
@@ -1745,11 +1975,17 @@ a.big-border:hover {
       FOOTER
 ========================================================*/
 .footer {
-	background: #2D6B37;
+	background-color: #2D6B37 !important;
 	padding: 100px 0;
+	z-index: 99 !important;
+}
+.footer .container {
+	background-color: #2D6B37 !important;
+	z-index: 99 !important;
 }
 .footer .logo {
 	width: 80px;
+	z-index: 99;
 }
 .footer .heading-block {
 	width: 100%;
@@ -1761,6 +1997,7 @@ a.big-border:hover {
 }
 .footer .contact-info {
 	color: #fff;
+
 }
 .footer .contact-info i {
 	width: 50px;
@@ -1810,30 +2047,30 @@ a.big-border:hover {
 /*=======================================================
 			testimonial
 ========================================================*/
+.testimonial {
+
+}
 .testimonial #testi-slide {
 	width: 85%;
 	text-align: center;
 	margin: 0 auto;
 }
-.testimonial .icon {
-	color: #666666;
-	font-size: 30px;
-	text-align: center;
-	margin-bottom: 30px;
+.testimonial .review-char {
+	width: 100%;
+	height: 250px;
+	background: url(../images/char_6-01.png) center center no-repeat;
+	background-size: contain;
+	background-position-x: 48%;
 }
 .testimonial #testi-slide p {
 	color: #666666;
 }
 .testimonial #testi-slide h6 {
-	color: #666666;
+	color: #2D6B37;
 	text-transform: uppercase;
 	margin-top: 30px;
 }
-.testimonial #testi-slide span {
-	color: #f6772c;
-	margin-bottom: 30px;
-	display: inline-block;
-}
+
 .testimonial .owl-controls .owl-dots div {
 	display: inline-block;
 	height: 14px;
@@ -1848,14 +2085,60 @@ a.big-border:hover {
 	transition: all 0.4s ease-in-out;
 }
 .testimonial .owl-controls .owl-dots div.active {
-	background: #f6772c;
-	border-color: #f6772c;
+	background: #C75333;
+	border-color: #c75333;
 }
 /*=======================================================
 			CONTACT FORM
 ========================================================*/
+.contact .contact-info {
+	text-align: center;
+}
+
+.contact .heading-block {
+	text-align: center;
+}
+.contact .heading-block h3 {
+	font-size: 5rem;
+	border-bottom: 3px solid #2D6B37;
+	display: inline-block;
+	padding-bottom: 10px;
+}
+.contact .row .contact-img {
+	width: 100%;
+	height: 350px;
+	background: url(../images/char_5-01.png) center center no-repeat;
+	background-size: contain;
+	margin-top: -50px;
+	margin-bottom: -30px;
+}
 .contact #contact_form {
 	text-align: center;
+	height: 100%;
+	background-color: #2D6B37;
+	padding: 30px;
+}
+.contact .contact-form button {
+	float: right;
+	border: 1px solid #fff;
+	background-color: none;
+	border-radius: 0px;
+	color: #fff;
+	margin-top: 0px;
+	letter-spacing: 1px;
+	padding: 15px 50px;
+	float: left;
+	text-transform: uppercase;
+	-webkit-transition: all 0.4s ease-in-out;
+	-moz-transition: all 0.4s ease-in-out;
+	-o-transition: all 0.4s ease-in-out;
+	-ms-transition: all 0.4s ease-in-out;
+	transition: all 0.4s ease-in-out;
+}
+.contact .contact-form button:hover {
+	background: #c75333;
+	color: #fff;
+	border-color: #2D6B37;
 }
 .contact .error {
 	border: none;
@@ -1932,6 +2215,7 @@ a.big-border:hover {
 	-ms-transition: all 0.4s ease-in-out;
 	transition: all 0.4s ease-in-out;
 }
+
 #contact_form li textarea {
 	height: 120px !important;
 	text-transform: uppercase;
@@ -2004,6 +2288,7 @@ a.big-border:hover {
 	color: #fff;
 	border-color: #c75333;
 }
+
 .newsletter {
 }
 .newsletter label {
@@ -2109,7 +2394,7 @@ a.big-border:hover {
 .cd-top {
 	display: inline-block;
 	height: 50px;
-	z-index: 9;
+	z-index: 9999;
 	width: 50px;
 	position: fixed;
 	bottom: 40px;
