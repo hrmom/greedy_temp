@@ -438,15 +438,15 @@ header nav .ownmenu .indicator {
 	position: relative;
 }
 .home-slide .slide-img-1 {
-	background: url(../images/mainbg_1.jpg) center center no-repeat;
+	background: url(../images/mainbg_5.png) center center no-repeat;
 	background-size: cover;
 }
 .home-slide .slide-img-2 {
-	background: url(../images/MAINBG_2.JPG) center center no-repeat;
+	background: url(../images/mainbg_6-01.png) center center no-repeat;
 	background-size: cover;
 }
 .home-slide .slide-img-3 {
-	background: url(../images/slides/slide-bg-3.jpg) center center no-repeat;
+	background: url(../images/mainbg_7-01.png) center center no-repeat;
 	background-size: cover;
 }
 .home-slide .flex-control-nav {
