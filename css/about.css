@@ -1,0 +1,156 @@
+/*=======================================================
+     sub-banner
+========================================================*/
+.sub-bnr {
+    background-color: transparent;
+	min-height: 100vh;
+}
+.sub-bnr .container {
+	width: 100vw;
+	height: 100%;
+}
+#myvideo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    z-index: -1;
+}
+/*=======================================================
+     about-us
+========================================================*/
+#about {
+    background: url(../images/bg-1.jpg) center center no-repeat;
+    background-size: cover;
+    height: auto;
+}
+.about .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.about-logo {
+    width: 20%;
+    margin: 50px 0;
+}
+.about-logo img {
+    width: 100%;
+}
+.about-content {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 80px;
+}
+/*=======================================================
+     about-gallery
+========================================================*/
+#gallery {
+    width: 100vw;
+    height: auto;
+}
+.gallery .gallery-box{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    justify-content: center;
+}
+.gallery .gallery-box div {
+    overflow: hidden;
+    flex-grow: 1;
+    flex-basis: 0;
+}
+.gallery .gallery-box div img {
+    width: 100%;
+}
+/*=======================================================
+     we are here
+========================================================*/
+#here {
+    background: url(../images/bg-1.jpg) center center no-repeat;
+    background-size: cover;
+    height: auto;
+    padding: 100px 0;
+}
+#here h2 {
+    margin-bottom: 50px;
+}
+.here .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.here-box {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.here2 {
+    flex-direction: row-reverse;
+}
+.here-box div {
+    width: 50%;
+}
+.here1 .here-img img {
+    width: 70%;
+    position: absolute;
+    top: 5%;
+    left: -25%;
+}
+.here1 .here-content {
+    margin-left: 100px;
+}
+.here2 .here-img img {
+    width: 70%;
+    position: absolute;
+    top: 5%;
+    right: -25%;
+}
+.here2 .here-content {
+    text-align: right;
+    margin-right: 100px;
+}
+.here-content h3 {
+    font-size: 60px;
+    font-style: italic;
+    color: #E14B2A;
+}
+/*=======================================================
+     join us
+========================================================*/
+#join {
+    background: url(../images/bg-1.jpg) center center no-repeat;
+    background-size: cover;
+    height: auto;
+}
+
+.join .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+}
+.join-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    gap: 30px;
+}
+.join-img {
+    width: 80%;
+    margin: 100px 0;
+}
+.join-img img {
+    width: 100%;
+}

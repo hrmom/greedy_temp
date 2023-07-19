@@ -1,0 +1,78 @@
+/*=======================================================
+     contact
+========================================================*/
+#contact {
+    background-color: #2D6B37;
+    background-size: cover;
+    height: auto;
+    padding-top: 200px;
+}
+.contact .checkline img{
+    margin: 0 !important;
+}
+.contact .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contact .container h2 {
+    color: #eee;
+    border-bottom: 2px solid #eee;
+}
+.contact .contact-info {
+    width: 60%;
+    text-align: center;
+    transform:translate(-4%, 0);
+    margin: 30px 0;
+}
+.contact-info ul {
+    display: flex;
+    justify-content: space-between;
+
+}
+.contact-info p {
+    color: #eee;
+    font-weight: normal;
+    font-size: 16px;
+    margin: 30px 0;
+}
+
+/*=======================================================
+    contact-form
+========================================================*/
+#contact_message {
+    visibility: hidden;
+}
+.contact-form h5 {
+    margin-bottom: 30px;
+}
+.contact-form {
+    width: 100%;
+    margin-bottom: 50px;
+}
+.contact-form ul {
+    text-align: center;
+}
+.contact-form input {
+    width: 600px;
+}
+.contact-form textarea {
+    width: 600px;
+}
+
+#btn_submit {
+    box-shadow: none !important;
+    border: none;
+    font-family: 'a black lives';
+    margin-left: 45%;
+    margin-top: 30px;
+}
+
+/*=======================================================
+     map
+========================================================*/
+#map {
+    background: url(../images/bg-1.jpg) center center no-repeat;
+    background-size: cover;
+    height: auto;
+}
